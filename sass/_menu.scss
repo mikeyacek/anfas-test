@@ -1,0 +1,124 @@
+
+
+ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+    right: 0;
+	position: absolute;
+    // float: right;
+    
+}
+
+// DESKTOP
+
+li {
+	display: inline-block;
+	float: left;
+	margin-right: 0px;
+}
+
+
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: $title-font;
+    font-size: 1.5em;
+	color: $grey;
+	background: $white;
+    text-transform: uppercase;
+	text-decoration: none;
+}
+
+
+li:hover a {
+    color: $white;
+	background: $orange;
+}
+
+
+li:hover ul a {
+	background: $white;
+	color: $grey;
+	height: 40px;
+	line-height: 40px;
+}
+
+
+li:hover ul a:hover {
+	background: $orange;
+	color: $white;
+}
+
+
+li ul {
+	display: none;
+}
+
+
+li ul li {
+	display: block;
+	float: none;
+}
+
+
+li ul li a {
+	width: auto;
+	min-width: 140px;
+	padding: 0 20px;
+}
+
+
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+
+.show-menu {
+	font-family: $title-font;
+    text-transform: uppercase;
+    font-size: 1.7em;
+	text-decoration: none;
+	color: $white;
+    height: 100%;
+	background: $orange;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+
+input[type=checkbox]{
+    display: none;
+}
+
+
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+
+// MOBIL
+
+@media screen and (max-width : $breakpoint){
+	
+	ul {
+		position: static;
+		display: none;
+	}
+	
+	li {
+		margin-bottom: 1px;
+	}
+	
+	ul li, li a {
+		width: 100%;
+	}
+	
+	.show-menu {
+		display: block;
+	}
+}

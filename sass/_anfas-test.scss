@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic&subset=latin,latin-ext);
+
+
+.menu__box {
+    @include center(100%);
+    min-width: 100%;
+    z-index: 10;
+    display: block;
+    position: fixed;
+    min-height: 50px;
+    background-color: $white;
+}
+
+.header {
+    @include center(100%);
+    min-height: 70vh;
+    position: relative;
+    background-image: url(/img/graphite-706202_1920.jpg);
+    background-size: cover;
+    background-color: red;
+}
+
+.header__title {
+    font-family: $title-font;
+    font-weight: 700;
+    font-size: $title-size-mobile;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    @media screen and (min-width: $breakpoint) {
+        font-size: $title-size;
+        text-align: left;
+    }
+}
+
+.header__circle {
+    position: absolute;
+    background-image: url(/img/alien.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    bottom: -120px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+.video__box {
+    @include center($image-w);
+    height: auto;
+    @media screen and (min-width: $breakpoint) {
+        
+    }
+}
+
+.video__box--col {
+    @include col(1/1);
+    position: relative;
+    padding-bottom: 45%;
+    padding-top: 40px;
+    height: 0;
+    margin-bottom: 70px;
+    // overflow: hidden;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    @media screen and (min-width: $breakpoint) {
+        @include col(1/4);
+        margin-bottom: 0px;
+        padding-bottom: 25%;
+        iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        
+    }
+        
+        
+        
+    }
+}
+
+figcaption { 
+    @include center(80%);
+    display: block;
+    position: relative;
+    top: 310px;
+    font-size: 0.9em;
+    line-height: 120%;
+    text-align: center;
+    @media screen and (min-width: $breakpoint) {
+        top: 120px;
+    }
+}
+
+.spacer {
+    min-height: 5em;
+    display: block;
+    background-color: transparent;
+    position: relative;
+}
+
+.text__blok {
+    @include center(90%);
+    line-height: 120%;
+    margin-bottom: 5em;
+    font-size: $font-size;
+    @media screen and (min-width: $breakpoint) {
+        @include center($text-w);
+    }
+}
+
+.text__blok-title {
+    font-family: $title-font;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.text__blok-perex {
+    font-size: $perex-size;
+    font-style: italic;
+    margin-bottom: 3em;
+}
+
+.image__blok {
+    @include center($image-w);
+    min-width: $image-w;
+    max-height: 350px;
+    object-fit: cover;
+    overflow: hidden;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.image__blok-article {
+    @include center($text-w);
+    margin: 1em;
+    float: right;
+    width: 200px;
+    height: 200px;
+}
+
+.link {
+    @include linx($black, $black, $orange, $orange);
+}
+
+.footer {
+    position: relative;
+    @include center(100%);
+    background-color: $lightgrey;
+    height: 300px;
+}
+
+.social__blok {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.social__blok-button {
+    display: inline-block;
+}
+
+.social__blok-icon {
+    margin: 0.5em;
+    transition: width 2s;
+    &:hover {
+        width: 72px;
+    }
+    @media screen and (min-width: $breakpoint) {
+        margin: 0.7em;
+    }
+}

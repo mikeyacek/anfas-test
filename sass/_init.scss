@@ -1,0 +1,38 @@
+$image-w: 1280px;
+$text-w: 768px;
+$font-size: 20px;
+$title-size: 72px;
+$title-size-mobile: 4em;
+$perex-size: 24px;
+
+$breakpoint: 760px;
+
+// FONTS
+$title-font: 'Open Sans', sans-serif;
+$main-font: 'Times New Roman,' Times, serif;
+
+// COLORS
+$white: #ecf0f1;
+$black: #0b0a0a;
+$grey: #95a5a6;
+$lightgrey: #bdc3c7;
+$green: #2ecc71;
+$red: #e74c3c;
+$orange: #e67e22;
+$clear: transparent;
+
+// MIXINY
+@mixin linx ($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;   
+    }
+    &:active {
+      color: $active;
+    }
+  }
+}

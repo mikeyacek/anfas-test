@@ -1,0 +1,570 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic&subset=latin,latin-ext);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
+ */
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
+ */
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column mixin.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [gutter=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column-width function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * An alias for the column-gutter function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ *  Alias for edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Apply a clearfix to an element.
+ */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  position: absolute; }
+
+li {
+  display: inline-block;
+  float: left;
+  margin-right: 0px; }
+
+li a {
+  display: block;
+  min-width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5em;
+  color: #95a5a6;
+  background: #ecf0f1;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+li:hover a {
+  color: #ecf0f1;
+  background: #e67e22; }
+
+li:hover ul a {
+  background: #ecf0f1;
+  color: #95a5a6;
+  height: 40px;
+  line-height: 40px; }
+
+li:hover ul a:hover {
+  background: #e67e22;
+  color: #ecf0f1; }
+
+li ul {
+  display: none; }
+
+li ul li {
+  display: block;
+  float: none; }
+
+li ul li a {
+  width: auto;
+  min-width: 140px;
+  padding: 0 20px; }
+
+ul li a:hover + .hidden, .hidden:hover {
+  display: block; }
+
+.show-menu {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.7em;
+  text-decoration: none;
+  color: #ecf0f1;
+  height: 100%;
+  background: #e67e22;
+  text-align: center;
+  padding: 10px 0;
+  display: none; }
+
+input[type=checkbox] {
+  display: none; }
+
+input[type=checkbox]:checked ~ #menu {
+  display: block; }
+
+@media screen and (max-width: 760px) {
+  ul {
+    position: static;
+    display: none; }
+
+  li {
+    margin-bottom: 1px; }
+
+  ul li, li a {
+    width: 100%; }
+
+  .show-menu {
+    display: block; } }
+.menu__box {
+  *zoom: 1;
+  width: auto;
+  max-width: 100%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 100%;
+  z-index: 10;
+  display: block;
+  position: fixed;
+  min-height: 50px;
+  background-color: #ecf0f1; }
+  .menu__box:before, .menu__box:after {
+    content: '';
+    display: table; }
+  .menu__box:after {
+    clear: both; }
+
+.header {
+  *zoom: 1;
+  width: auto;
+  max-width: 100%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  min-height: 70vh;
+  position: relative;
+  background-image: url(/img/graphite-706202_1920.jpg);
+  background-size: cover;
+  background-color: red; }
+  .header:before, .header:after {
+    content: '';
+    display: table; }
+  .header:after {
+    clear: both; }
+
+.header__title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 4em;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ecf0f1; }
+  @media screen and (min-width: 760px) {
+    .header__title {
+      font-size: 72px;
+      text-align: left; } }
+
+.header__circle {
+  position: absolute;
+  background-image: url(/img/alien.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  bottom: -120px;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: white;
+  border-style: dotted;
+  border-width: 1px; }
+
+.video__box {
+  *zoom: 1;
+  width: auto;
+  max-width: 1280px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  height: auto; }
+  .video__box:before, .video__box:after {
+    content: '';
+    display: table; }
+  .video__box:after {
+    clear: both; }
+
+.video__box--col {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%;
+  position: relative;
+  padding-bottom: 45%;
+  padding-top: 40px;
+  height: 0;
+  margin-bottom: 70px; }
+  .video__box--col:before, .video__box--col:after {
+    content: '';
+    display: table; }
+  .video__box--col:after {
+    clear: both; }
+  .video__box--col:last-child {
+    margin-right: 0%; }
+  .video__box--col iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  @media screen and (min-width: 760px) {
+    .video__box--col {
+      *zoom: 1;
+      float: left;
+      clear: none;
+      text-align: inherit;
+      width: 22.75%;
+      margin-left: 0%;
+      margin-right: 3%;
+      margin-bottom: 0px;
+      padding-bottom: 25%; }
+      .video__box--col:before, .video__box--col:after {
+        content: '';
+        display: table; }
+      .video__box--col:after {
+        clear: both; }
+      .video__box--col:last-child {
+        margin-right: 0%; }
+      .video__box--col iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto; } }
+
+figcaption {
+  *zoom: 1;
+  width: auto;
+  max-width: 80%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+  position: relative;
+  top: 310px;
+  font-size: 0.9em;
+  line-height: 120%;
+  text-align: center; }
+  figcaption:before, figcaption:after {
+    content: '';
+    display: table; }
+  figcaption:after {
+    clear: both; }
+  @media screen and (min-width: 760px) {
+    figcaption {
+      top: 120px; } }
+
+.spacer {
+  min-height: 5em;
+  display: block;
+  background-color: transparent;
+  position: relative; }
+
+.text__blok {
+  *zoom: 1;
+  width: auto;
+  max-width: 90%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 120%;
+  margin-bottom: 5em;
+  font-size: 20px; }
+  .text__blok:before, .text__blok:after {
+    content: '';
+    display: table; }
+  .text__blok:after {
+    clear: both; }
+  @media screen and (min-width: 760px) {
+    .text__blok {
+      *zoom: 1;
+      width: auto;
+      max-width: 768px;
+      float: none;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0; }
+      .text__blok:before, .text__blok:after {
+        content: '';
+        display: table; }
+      .text__blok:after {
+        clear: both; } }
+
+.text__blok-title {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5em; }
+
+.text__blok-perex {
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 3em; }
+
+.image__blok {
+  *zoom: 1;
+  width: auto;
+  max-width: 1280px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 1280px;
+  max-height: 350px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  overflow: hidden;
+  margin-top: 5em;
+  margin-bottom: 5em; }
+  .image__blok:before, .image__blok:after {
+    content: '';
+    display: table; }
+  .image__blok:after {
+    clear: both; }
+
+.image__blok-article {
+  *zoom: 1;
+  width: auto;
+  max-width: 768px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 1em;
+  float: right;
+  width: 200px;
+  height: 200px; }
+  .image__blok-article:before, .image__blok-article:after {
+    content: '';
+    display: table; }
+  .image__blok-article:after {
+    clear: both; }
+
+.link a {
+  color: #0b0a0a; }
+  .link a:visited {
+    color: #0b0a0a; }
+  .link a:hover {
+    color: #e67e22; }
+  .link a:active {
+    color: #e67e22; }
+
+.footer {
+  position: relative;
+  *zoom: 1;
+  width: auto;
+  max-width: 100%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #bdc3c7;
+  height: 300px; }
+  .footer:before, .footer:after {
+    content: '';
+    display: table; }
+  .footer:after {
+    clear: both; }
+
+.social__blok {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.social__blok-button {
+  display: inline-block; }
+
+.social__blok-icon {
+  margin: 0.5em;
+  -webkit-transition: width 2s;
+  transition: width 2s; }
+  .social__blok-icon:hover {
+    width: 72px; }
+  @media screen and (min-width: 760px) {
+    .social__blok-icon {
+      margin: 0.7em; } }
