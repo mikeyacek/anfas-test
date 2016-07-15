@@ -9,6 +9,20 @@
     background-color: $white;
 }
 
+#logo {
+    li {
+        a {
+            display: block;
+        }
+    }
+    @media screen and (min-width: $breakpoint) {
+        display: block;
+        position: absolute;
+        float: left;
+        left: 0;
+    }
+}
+
 .header {
     @include center(100%);
     min-height: 70vh;
