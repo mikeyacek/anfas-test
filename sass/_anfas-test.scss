@@ -1,6 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic&subset=latin,latin-ext);
-
-
 .menu__box {
     @include center(100%);
     min-width: 100%;
@@ -61,9 +59,7 @@
 .video__box {
     @include center($image-w);
     height: auto;
-    @media screen and (min-width: $breakpoint) {
-        
-    }
+    @media screen and (min-width: $breakpoint) {}
 }
 
 .video__box--col {
@@ -86,29 +82,25 @@
         margin-bottom: 0px;
         padding-bottom: 25%;
         iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        
-    }
-        
-        
-        
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
-figcaption { 
-    @include center(80%);
+figcaption {
+    @include center(100vw);
     display: block;
-    position: relative;
-    top: 310px;
+    position: absolute;
+    top: 102%;
     font-size: 0.9em;
     line-height: 120%;
     text-align: center;
     @media screen and (min-width: $breakpoint) {
-        top: 120px;
+        top: 160px;
     }
 }
 
@@ -145,21 +137,26 @@ figcaption {
 }
 
 .image__blok {
-    @include center($image-w);
-    min-width: $image-w;
+    @include center(100%);
+    min-width: 100%;
     max-height: 350px;
     object-fit: cover;
     overflow: hidden;
     margin-top: 5em;
     margin-bottom: 5em;
+    @media screen and (min-width: $breakpoint) {
+        @include center($image-w);
+        min-width: $image-w;
+    }
 }
 
 .image__blok-article {
-    @include center($text-w);
-    margin: 1em;
+    display: inline;
     float: right;
+    margin: 1em;
     width: 200px;
     height: 200px;
+    object-position: center;
 }
 
 .link {
@@ -186,7 +183,8 @@ figcaption {
 }
 
 .social__blok-icon {
-    margin: 0.5em;
+    width: 40px;
+    margin: 0.2em;
     transition: width 2s;
     &:hover {
         width: 72px;
